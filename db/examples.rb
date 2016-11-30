@@ -17,3 +17,54 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+Card.create([
+  {
+    name: 'Rogue',
+    class: 'Rogue'
+  },
+  {
+    name: 'Illusionist',
+    class: 'Illusionist'
+  },
+  {
+    name: 'Mesmer',
+    class: 'Mesmer'
+  },
+  {
+    name: 'Summoner',
+    class: 'Summoner'
+  },
+  {
+    name: 'Wizard',
+    class: 'Wizard'
+  },
+  {
+    name: 'Monk',
+    class: 'Monk'
+  },
+  {
+    name: 'Battle Mage',
+    class: 'Battle Mage'
+  },
+  {
+    name: 'Paladin',
+    class: 'Paladin'
+  },
+  {
+    name: 'Warrior',
+    class: 'Warrior'
+  },
+  {
+    name: 'Ranger',
+    class: 'Ranger'
+  },
+  {
+    name: 'Scout',
+    class: 'Scout'
+  }
+  {
+    name: 'Assassin',
+    class: 'Assassin'
+  }
+])
