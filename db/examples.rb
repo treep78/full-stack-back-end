@@ -94,7 +94,12 @@ Combination.create([
 Deck.create([
   {
     name:'Deck1',
-    description: 'A deck of cards',
-    cards: 'Warrior,Monk,Assassin'
+    description: 'A deck of cards'
   }
+])
+CardLink.create([
+    {
+      deck_id: '1',
+      card_id: '3'
+    }
 ])
