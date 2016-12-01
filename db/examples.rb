@@ -72,22 +72,22 @@ Card.create([
 Combination.create([
   {
     first_card_class: 'Assassin',
-    second_card_clas: 'Illusionist',
+    second_card_class: 'Illusionist',
     result: 'Rogue'
   },
   {
     first_card_class: 'Illusionist',
-    second_card_clas: 'Assassin',
+    second_card_class: 'Assassin',
     result: 'Rogue'
   },
   {
     first_card_class: 'Scout',
-    second_card_clas: 'Mesmer',
+    second_card_class: 'Mesmer',
     result: 'Rogue'
   },
   {
     first_card_class: 'Mesmer',
-    second_card_clas: 'Scout',
+    second_card_class: 'Scout',
     result: 'Rogue'
   },
 ])

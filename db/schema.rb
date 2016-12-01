@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130214716) do
+ActiveRecord::Schema.define(version: 20161201143917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,14 +21,6 @@ ActiveRecord::Schema.define(version: 20161130214716) do
     t.string   "card_class"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "combinatinos", force: :cascade do |t|
-    t.string   "first_card_class"
-    t.string   "second_card_class"
-    t.string   "result_class"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
   end
 
   create_table "combinations", force: :cascade do |t|
