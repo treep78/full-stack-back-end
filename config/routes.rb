@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  root 'topics#index'
-
   resources :combinations, except: [:new, :edit]
   resources :hands, except: [:new, :edit]
   resources :examples, except: [:new, :edit]
