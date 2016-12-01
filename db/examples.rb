@@ -21,50 +21,63 @@
 Card.create([
   {
     name: 'Rogue',
-    class: 'Rogue'
+    card_class: 'Rogue'
   },
   {
     name: 'Illusionist',
-    class: 'Illusionist'
+    card_class: 'Illusionist'
   },
   {
     name: 'Mesmer',
-    class: 'Mesmer'
+    card_class: 'Mesmer'
   },
   {
     name: 'Summoner',
-    class: 'Summoner'
+    card_class: 'Summoner'
   },
   {
     name: 'Wizard',
-    class: 'Wizard'
+    card_class: 'Wizard'
   },
   {
     name: 'Monk',
-    class: 'Monk'
+    card_class: 'Monk'
   },
   {
     name: 'Battle Mage',
-    class: 'Battle Mage'
+    card_class: 'Battle Mage'
   },
   {
     name: 'Paladin',
-    class: 'Paladin'
+    card_class: 'Paladin'
   },
   {
     name: 'Warrior',
-    class: 'Warrior'
+    card_class: 'Warrior'
   },
   {
     name: 'Ranger',
-    class: 'Ranger'
+    card_class: 'Ranger'
   },
   {
     name: 'Scout',
-    class: 'Scout'
-  }
+    card_class: 'Scout'
+  },
   {
     name: 'Assassin',
-    class: 'Assassin'
+    card_class: 'Assassin'
   }
+])
+
+Combination.create([
+  {
+    first_card_class: 'Assassin',
+    second_card_clas: 'Illusionist',
+    result: 'Rogue'
+  },
+  {
+    first_card_class: 'Illusionist',
+    second_card_clas: 'Assassin',
+    result: 'Rogue'
+  },
 ])

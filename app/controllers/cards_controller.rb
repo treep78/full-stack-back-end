@@ -1,6 +1,14 @@
 class CardsController < ApplicationController
   before_action :set_card, only: [:show, :update, :destroy]
 
+  def set_card
+    @card = Card.find(params[:id])
+  end
+
+  def card_params
+    params.require(:card).permit(:name, :card_class)
+  end
+
   # GET /cards
   # GET /cards.json
   def index
@@ -12,7 +20,7 @@ class CardsController < ApplicationController
   # GET /cards/1
   # GET /cards/1.json
   def show
-    render json: @card
+    render json: Card.find(params[:id])
   end
 
   # POST /cards
@@ -30,8 +38,6 @@ class CardsController < ApplicationController
   # PATCH/PUT /cards/1
   # PATCH/PUT /cards/1.json
   def update
-    @card = Card.find(params[:id])
-
     if @card.update(card_params)
       head :no_content
     else
@@ -46,14 +52,4 @@ class CardsController < ApplicationController
 
     head :no_content
   end
-
-  private
-
-    def set_card
-      @card = Card.find(params[:id])
-    end
-
-    def card_params
-      params.require(:Card).permit(:name, :class)
-    end
 end
