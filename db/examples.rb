@@ -80,4 +80,14 @@ Combination.create([
     second_card_clas: 'Assassin',
     result: 'Rogue'
   },
+  {
+    first_card_class: 'Scout',
+    second_card_clas: 'Mesmer',
+    result: 'Rogue'
+  },
+  {
+    first_card_class: 'Mesmer',
+    second_card_clas: 'Scout',
+    result: 'Rogue'
+  },
 ])
