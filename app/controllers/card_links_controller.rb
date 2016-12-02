@@ -1,4 +1,4 @@
-class CardLinksController < ApplicationController
+class CardLinksController < ProtectedController
   before_action :set_card_link, only: [:show, :update, :destroy]
 
   # GET /card_links
@@ -49,11 +49,11 @@ class CardLinksController < ApplicationController
 
   private
 
-    def set_card_link
-      @card_link = CardLink.find(params[:id])
-    end
+  def set_card_link
+    @card_link = CardLink.find(params[:id])
+  end
 
-    def card_link_params
-      params.require(:card_link).permit(:deck_id, :card_id)
-    end
+  def card_link_params
+    params.require(:card_link).permit(:deck_id, :card_id)
+  end
 end

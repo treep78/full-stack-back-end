@@ -1,4 +1,4 @@
-class CardsController < ApplicationController
+class CardsController < ProtectedController
   before_action :set_card, only: [:show, :update, :destroy]
 
   def set_card
