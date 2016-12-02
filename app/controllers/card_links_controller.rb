@@ -21,7 +21,7 @@ class CardLinksController < ApplicationController
     @card_link = CardLink.new(card_link_params)
 
     if @card_link.save
-      render json: @card_link, status: :created, location: @card_link
+      render json: @card_link, status: :created
     else
       render json: @card_link.errors, status: :unprocessable_entity
     end
