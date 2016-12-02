@@ -49,7 +49,7 @@ RSpec.describe 'Decks API' do
       expect(decks_response.length).to eq(decks.count)
       # check that the first article's title is equal
       # to the article title that we created
-      expect(decks_response.first['name']).to eq(deck['name'])
+      expect(decks_response['decks'].first['name']).to eq(deck['name'])
     end
   end
 
@@ -63,8 +63,8 @@ RSpec.describe 'Decks API' do
 
       deck_response = JSON.parse(response.body)
 
-      expect(deck_response['id']).not_to be_nil
-      expect(deck_response['name']).to eq(deck_params[:name])
+      expect(deck_response['deck']['id']).not_to be_nil
+      expect(deck_response['deck']['name']).to eq(deck_params[:name])
     end
   end
 
@@ -108,8 +108,8 @@ RSpec.describe 'Decks API' do
 
       expect(response).to be_success
       deck_response = JSON.parse(response.body)
-      expect(deck_response['id']).not_to be_nil
-      expect(deck_response['name']).to eq(deck_new[:name])
+      expect(deck_response['deck']['id']).not_to be_nil
+      expect(deck_response['deck']['name']).to eq(deck_new[:name])
     end
   end
 end

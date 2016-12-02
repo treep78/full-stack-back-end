@@ -49,7 +49,7 @@ RSpec.describe 'Cards API' do
       expect(cards_response.length).to eq(cards.count)
       # check that the first article's title is equal
       # to the article title that we created
-      expect(cards_response.first['name']).to eq(card['name'])
+      expect(cards_response['cards'].first['name']).to eq(card['name'])
     end
   end
 
@@ -62,9 +62,9 @@ RSpec.describe 'Cards API' do
       expect(response).to be_success
 
       card_response = JSON.parse(response.body)
-
-      expect(card_response['id']).not_to be_nil
-      expect(card_response['name']).to eq(card_params[:name])
+      print(card_response)
+      expect(card_response['card']['id']).not_to be_nil
+      expect(card_response['card']['name']).to eq(card_params[:name])
     end
   end
 
@@ -108,8 +108,8 @@ RSpec.describe 'Cards API' do
 
       expect(response).to be_success
       card_response = JSON.parse(response.body)
-      expect(card_response['id']).not_to be_nil
-      expect(card_response['name']).to eq(card_new[:name])
+      expect(card_response['card']['id']).not_to be_nil
+      expect(card_response['card']['name']).to eq(card_new[:name])
     end
   end
 end
