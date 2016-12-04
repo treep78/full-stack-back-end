@@ -19,6 +19,7 @@ class CardLinksController < ProtectedController
   # POST /card_links.json
   def create
     @card_link = CardLink.new(card_link_params)
+    # @card_link = current_user.card_links.build(card_link_params)
 
     if @card_link.save
       render json: @card_link, status: :created

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161201190826) do
+ActiveRecord::Schema.define(version: 20161202222720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(version: 20161201190826) do
     t.integer  "card_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
   end
 
   add_index "card_links", ["card_id"], name: "index_card_links_on_card_id", using: :btree
   add_index "card_links", ["deck_id"], name: "index_card_links_on_deck_id", using: :btree
+  add_index "card_links", ["user_id"], name: "index_card_links_on_user_id", using: :btree
 
   create_table "cards", force: :cascade do |t|
     t.string   "name"
@@ -76,5 +78,6 @@ ActiveRecord::Schema.define(version: 20161201190826) do
 
   add_foreign_key "card_links", "cards"
   add_foreign_key "card_links", "decks"
+  add_foreign_key "card_links", "users"
   add_foreign_key "examples", "users"
 end
