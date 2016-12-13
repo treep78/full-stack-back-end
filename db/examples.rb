@@ -97,9 +97,3 @@ Deck.create([
     description: 'A deck of cards'
   }
 ])
-CardLink.create([
-    {
-      deck_id: '1',
-      card_id: '3'
-    }
-])

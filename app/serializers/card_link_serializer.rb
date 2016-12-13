@@ -4,6 +4,6 @@ class CardLinkSerializer < ActiveModel::Serializer
   has_one :card
 
   def editable
-    # scope == object.user
+    scope == object.user
   end
 end
