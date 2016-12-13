@@ -6,7 +6,7 @@ curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
-  --header "Authorization: Token token=BAhJIiU3ODA5MmNlZjhjNDdkMzdiNGRlZjdjYWE4ZTFiMDU2YwY6BkVG--630ad8c0822d84fe1f41a39b95efa47044ed8eb6" \
+  --header "Authorization: Token token=BAhJIiVmNDA4MDgzNDAwYzYyZDQxOGJhYWMzNDE3NmY5NDUyMQY6BkVG--5454cd00b3ba0d250a93ad93dfde87ca525dc500" \
   --data '{
     "card_link": {
       "deck_id": "1",
