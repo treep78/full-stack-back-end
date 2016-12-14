@@ -91,9 +91,3 @@ Combination.create([
     result: 'Rogue'
   },
 ])
-Deck.create([
-  {
-    name:'Deck1',
-    description: 'A deck of cards'
-  }
-])
